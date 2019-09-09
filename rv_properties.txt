@@ -20,4 +20,4 @@ LTL: [](call_Enqueue(d1) & (!return_Dequeue(d1) U call_Top_Down) ->
 - [](ced1 && ((! rd1) U ctd) -> <>(ctd && <>cp1))
 
 PATTERN: Constrained 3-2 Response Chain
-LTL:[] (p --> [] (q --> r /\ () <> s))
+LTL: - [] (p -> [] (q -> r |() <> s))
