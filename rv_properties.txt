@@ -19,10 +19,6 @@ LTL: [](call_Enqueue(d1) & (!return_Dequeue(d1) U call_Top_Down) ->
         <>(call_Top_Down & <>call_P(d1,*)))
 - [](ced1 && ((! rd1) U ctd) -> <>(ctd && <>cp1))
 
-PATTERN: Constrained 3-2 Response Chain
-LTL: [] (Q -> (P -> (!R U (S & !R & !Z & o((!R & !Z) U T)))) U
-    (R | [] (P -> (S & !Z & o(!Z U T)))))
-    
 PATTERN: Universality
 LTL: [](P)
 - [](P)
