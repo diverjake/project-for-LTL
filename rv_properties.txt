@@ -60,10 +60,6 @@ LTL: [] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
 - [] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
 
 PATTERN: Bounded Existence
-LTL: <> p -> ! p U (p && ! q R q R ! q R q R [] ! q)
-- <> p -> ! p U (p && ! q R q R ! q R q R [] ! q)
-
-PATTERN: Bounded Existence
 LTL: <> q -> (! p && ! q) U (q || (p && ! q) U (q || (! p && ! q) U (q || (p && ! q) U (q || ! p U q))))
 - <> q -> (! p && ! q) U (q || (p && ! q) U (q || (! p && ! q) U (q || (p && ! q) U (q || ! p U q))))
 
