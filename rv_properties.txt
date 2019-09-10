@@ -336,9 +336,5 @@ LTL: <> (p && X p) && <> (q && X q)
 - <> (p && X p) && <> (q && X q)
 
 PATTERN:  Unknown
-LTL: ! [] (q -> (! p && ! r) U (r || (p && ! r) U (r || (! p && ! r) U (r || (p && ! r) U (r || ! p W r || [] p)))))
-- ! [] (q -> (! p && ! r) U (r || (p && ! r) U (r || (! p && ! r) U (r || (p && ! r) U (r || ! p W r || [] p)))))
-
-PATTERN:  Unknown
 LTL: ! [] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
 - ! [] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
