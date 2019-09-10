@@ -132,8 +132,8 @@ LTL: [][]q||[]p
 - [][]q||[] p
 
 PATTERN:  Unknown
-LTL: X<>p
-- X<>p 
+LTL: X <> p
+- X <> p 
 
 PATTERN:  Unknown
 LTL: [] p || <> q
@@ -208,7 +208,7 @@ LTL: X X [] p
 - X X [] p
 
 PATTERN:  Unknown
-LTL: [](p -> p U q U r)
+LTL: [](p -> p U (q U r)
 - [](p -> p U q U r)
 
 PATTERN:  Unknown
