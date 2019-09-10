@@ -27,14 +27,6 @@ PATTERN: Existence
 LTL: <> r->(p -> !r U(q && ! r)) U r
 - <> r->(p -> !r U(q && ! r)) U r
 
-PATTERN: Existence
-LTL: []((a U b) | (c U d))
-- []((a U b) | (c U d))
-
-PATTERN: Existence
-LTL: (x1 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & X[]((c2 U d2) | (a2 U b2)))
-- (x1 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & X[]((c2 U d2) | (a2 U b2)))
-
 PATTERN: Constrained Response-chain 2-1
 LTL: [] (p && X <> q -> X <> (q && <> r))
 -[] (p && X <> q -> X <> (q && <> r))
@@ -63,13 +55,29 @@ PATTERN: Constrained Response-chain 2-1
 - <> s -> (q && X (! s U r) -> X (! s U (r && <> p))) U s
 
 PATTERN: Constrained Response-chain 2-1
-[] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
+LTL: [] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
 -[] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
 
 PATTERN: Constrained Response-chain 2-1
-[] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
+LTL: [] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
 -[] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
 
-PATTERN: Constrained Response-chain 2-1
-[] (s -> (q && X (! t U r) -> X (! t U (r && <> p))) U (t || [] (q && X (! t U r) -> X (! t U (r && <> p)))))
-- [] (s -> (q && X (! t U r) -> X (! t U (r && <> p))) U (t || [] (q && X (! t U r) -> X (! t U (r && <> p)))))
+PATTERN: Bounded Existence
+LTL: ! p W p W ! p W p W [] ! p
+- ! p W p W ! p W p W [] ! p
+
+PATTERN: Bounded Existence
+LTL: <> p -> ! p U (p && ! q W q W ! q W q W [] ! q)
+-<> p -> ! p U (p && ! q W q W ! q W q W [] ! q)
+
+PATTERN: Bounded Existence
+LTL: <> q -> (! p && ! q) U (q || (p && ! q) U (q || (! p && ! q) U (q || (p && ! q) U (q || ! p U q))))
+- <> q -> (! p && ! q) U (q || (p && ! q) U (q || (! p && ! q) U (q || (p && ! q) U (q || ! p U q))))
+
+PATTERN: Bounded Existence
+LTL: [] (q && <> r -> (! p && ! r) U (r || (p && ! r) U (r || (! p && ! r) U (r || (p && ! r) U (r || ! p U r)))))
+- [] (q && <> r -> (! p && ! r) U (r || (p && ! r) U (r || (! p && ! r) U (r || (p && ! r) U (r || ! p U r)))))
+
+PATTERN: Bounded Existence
+LTL: [] (q -> (! p && ! r) U (r || (p && ! r) U (r || (! p && ! r) U (r || (p && ! r) U (r || ! p W r || [] p)))))
+- [] (q -> (! p && ! r) U (r || (p && ! r) U (r || (! p && ! r) U (r || (p && ! r) U (r || ! p W r || [] p)))))
