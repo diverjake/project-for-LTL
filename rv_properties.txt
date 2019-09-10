@@ -19,6 +19,7 @@ LTL: [](call_Enqueue(d1) & (!return_Dequeue(d1) U call_Top_Down) ->
         <>(call_Top_Down & <>call_P(d1,*)))
 - [](ced1 && ((! rd1) U ctd) -> <>(ctd && <>cp1))
 
-PATTERN: Universality
-LTL: [](P)
-- [](P)
+PATTERN: Existence
+LTL: [](!POPServerMessageDelete) | 
+     <>(POPServerMessageDelete & <>PlacedinMailboxes)
+- [](!p)|<>(p$<>PM)
