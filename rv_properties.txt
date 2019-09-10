@@ -32,20 +32,21 @@ LTL: [] (p && X <> q -> X <> (q && <> r))
 -[] (p && X <> q -> X <> (q && <> r))
 
 PATTERN: Constrained Response-chain 2-1
-[] (p -> [] (q -> r && X <> s))
+LTL: [] (p -> [] (q -> r && X <> s))
 - [] (p -> [] (q -> r && X <> s))
 
 PATTERN: Constrained Response-chain 2-1
-[] (p -> <> (q && X <> r))
+LTL: [] (p -> <> (q && X <> r))
 - [] (p -> <> (q && X <> r))
 
 PATTERN: Constrained Response-chain 2-1
-[] (s && <> t -> (p -> ! t U (q && ! t && X (! t U r))) U t)
+LTL: [] (s && <> t -> (p -> ! t U (q && ! t && X (! t U r))) U t)
 -[] (s && <> t -> (p -> ! t U (q && ! t && X (! t U r))) U t)
 
 PATTERN: Constrained Response-chain 2-1
-<> s -> (p -> ! s U (q && ! s && X (! s U r))) U s
+LTL: <> s -> (p -> ! s U (q && ! s && X (! s U r))) U s
 - <> s -> (p -> ! s U (q && ! s && X (! s U r))) U s
+
 PATTERN: Constrained Response-chain 2-1
 [] (s -> [] (q && X <> r -> X (! r U (r && <> p))))
 - [] (s -> [] (q && X <> r -> X (! r U (r && <> p))))
