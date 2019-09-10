@@ -23,11 +23,6 @@ PATTERN: Global
 LTL: [] p
 - [] p
 
-PATTERN: Response
-LTL: !(<> r -> (p -> ! r U (q | ! r)) U r)
-- !(<>r -> (P -> !r U (q|!r)) U r)
-
 PATTERN: Existence
-LTL: [](!POPServerMessageDelete) | 
-     <>(POPServerMessageDelete & <>PlacedinMailboxes)
-- [](!p)|<>(p&<>PM)
+LTL: <> r->(p -> !r U(q && ! r)) U r
+- <> r->(p -> !r U(q && ! r)) U r
