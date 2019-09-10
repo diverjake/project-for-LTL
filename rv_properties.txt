@@ -29,7 +29,7 @@ LTL: <> r->(p -> !r U(q && ! r)) U r
 
 PATTERN: Constrained Response-chain 2-1
 LTL: [] (p && X <> q -> X <> (q && <> r))
--[] (p && X <> q -> X <> (q && <> r))
+- [](p && X <> q -> X <> (q && <> r))
 
 PATTERN: Constrained Response-chain 2-1
 LTL: [] (p -> [] (q -> r && X <> s))
@@ -41,7 +41,7 @@ LTL: [] (p -> <> (q && X <> r))
 
 PATTERN: Constrained Response-chain 2-1
 LTL: [] (s && <> t -> (p -> ! t U (q && ! t && X (! t U r))) U t)
--[] (s && <> t -> (p -> ! t U (q && ! t && X (! t U r))) U t)
+- [] (s && <> t -> (p -> ! t U (q && ! t && X (! t U r))) U t)
 
 PATTERN: Constrained Response-chain 2-1
 LTL: <> s -> (p -> ! s U (q && ! s && X (! s U r))) U s
@@ -57,15 +57,15 @@ PATTERN: Constrained Response-chain 2-1
 
 PATTERN: Constrained Response-chain 2-1
 LTL: [] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
--[] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
+- [] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
 
 PATTERN: Constrained Response-chain 2-1
 LTL: [] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
--[] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
+- [] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
 
 PATTERN: Bounded Existence
 LTL: <> p -> ! p U (p && ! q R q R ! q R q R [] ! q)
--<> p -> ! p U (p && ! q R q R ! q R q R [] ! q)
+- <> p -> ! p U (p && ! q R q R ! q R q R [] ! q)
 
 PATTERN: Bounded Existence
 LTL: <> q -> (! p && ! q) U (q || (p && ! q) U (q || (! p && ! q) U (q || (p && ! q) U (q || ! p U q))))
@@ -110,3 +110,31 @@ LTL: <> (p -> <>q)
 PATTERN:  Unknown
 LTL: [](p -> q && ! r)
 - [](p -> q && ! r)
+
+PATTERN:  Unknown
+LTL: [] (! p || ! q) && [] (! p || ! r) && [] (! q || ! r)
+- [] (! p || ! q) && [] (! p || ! r) && [] (! q || ! r)
+
+PATTERN:  Unknown
+LTL: [] (destino -> X (monster U (ingreso && X (error || ok))))
+- [] (destino -> X (monster U (ingreso && X (error || ok))))
+
+PATTERN:  Unknown
+LTL: [] (p -> [] (q && ! r && X (! r U s)))
+- [] (p -> [] (q && ! r && X (! r U s)))
+
+PATTERN:  Unknown
+LTL: !([] s -> (q && X (! s U r) -> X (! s U (r && [] p))) U s)
+- !([] s -> (q && X (! s U r) -> X (! s U (r && [] p))) U s)
+
+PATTERN:  Unknown
+LTL: ![] (p -> [] (q -> r && ! s && X (! s U t)))
+- ![] (p -> [] (q -> r && ! s && X (! s U t)))
+
+PATTERN:  Unknown
+LTL: !([] [] p && [] [] q)
+- !([] [] p && [] [] q)
+
+PATTERN:  Unknown
+LTL: [][]q||[]p
+- [][]q||[] p
