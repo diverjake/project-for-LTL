@@ -209,7 +209,7 @@ LTL: X X [] p
 
 PATTERN:  Unknown
 LTL: [](p -> p U (q U r)
-- [](p -> p U q U r)
+- [](p -> p U (q U r)
 
 PATTERN:  Unknown
 LTL: ![] (p -> <> (q && <> r))
