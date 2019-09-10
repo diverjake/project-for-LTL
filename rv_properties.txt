@@ -248,10 +248,6 @@ LTL: ! [] (s && ! r && <> r -> ! p U (q || r))
 - ! [] (s && ! r && <> r -> ! p U (q || r))
 
 PATTERN:  Unknown
-LTL: ! [] (p -> p U q U r)
-- ! [] (p -> p U q U r)
-
-PATTERN:  Unknown
 LTL: ! [] (s && ! r && <> r -> (p -> ! r U (q && ! r)) U r)
 - ! [] (s && ! r && <> r -> (p -> ! r U (q && ! r)) U r)
 
@@ -266,10 +262,6 @@ LTL: ! (<> p -> ! q U (p || r && ! q && X (! q U s)))
 PATTERN:  Unknown
 LTL: ! [] (p -> [] (q -> r && ! s && X (! s U t)))
 - ! [] (p -> [] (q -> r && ! s && X (! s U t)))
-
-PATTERN:  Unknown
-LTL: ! [] (s -> <> p -> ! p U (t || q && ! p && X (! p U r)))
-- ! [] (s -> <> p -> ! p U (t || q && ! p && X (! p U r)))
 
 PATTERN:  Unknown
 LTL: ! (<> s -> (p -> ! s U (q && ! s && X (! s U r))) U s)
