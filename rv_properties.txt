@@ -312,10 +312,6 @@ LTL: ! [] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
 - ! [] (s && <> t -> (q && X (! t U r) -> X (! t U (r && <> p))) U t)
 
 PATTERN:  Unknown
-LTL: ![] (s -> (q && X (! t U r) -> X (! t U (r && <> p))) U (t || [] (q && X (! t U r) -> X (! t U (r && <> p)))))
-- ![](s -> (q && X (! t U r) -> X (! t U (r && <> p))) U (t || [] (q && X (! t U r) -> X (! t U (r && <> p)))))
-
-PATTERN:  Unknown
 LTL: ! (<> q -> (! p && ! q) U (q || (p && ! q) U (q || (! p && ! q) U (q || (p && ! q) U (q || ! p U q)))))
 - !(<> q -> (! p && ! q) U (q || (p && ! q) U (q || (! p && ! q) U (q || (p && ! q) U (q || ! p U q)))))
 
@@ -336,5 +332,4 @@ LTL: <> (p && X p) && <> (q && X q)
 - <> (p && X p) && <> (q && X q)
 
 PATTERN:  Unknown
-LTL: ! [] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
-- ! [] (s -> (p -> ! t U (q && ! t && X (! t U r))) U (t || [] (p -> q && X <> r)))
+LTL: 
