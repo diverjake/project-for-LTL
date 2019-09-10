@@ -104,8 +104,8 @@ LTL: [](p -> q && ! r)
 - [](p -> q && ! r)
 
 PATTERN:  Unknown
-LTL: [] (! p || ! q) && [] (! p || ! r) && [] (! q || ! r)
-- [] (! p || ! q) && [] (! p || ! r) && [] (! q || ! r)
+LTL: !(<> p -> ! q U (r || p))
+- !(<> p -> ! q U (r || p))
 
 PATTERN:  Unknown
 LTL: [] (destino -> X (monster U (ingreso && X (error || ok))))
@@ -130,3 +130,107 @@ LTL: !([] [] p && [] [] q)
 PATTERN:  Unknown
 LTL: [][]q||[]p
 - [][]q||[] p
+
+PATTERN:  Unknown
+LTL: X<>p
+- X<>p 
+
+PATTERN:  Unknown
+LTL: [] p || <> q
+- [] p || <> q
+
+PATTERN:  Unknown
+LTL: [] ! p || <> ! q
+- [] ! p || <> ! q
+
+PATTERN:  Unknown
+LTL: ![] (<> p && q)
+- ![] (<> p && q)
+
+PATTERN:  Unknown
+LTL: ![] (p -> p U q)
+- ![] (p -> p U q)
+
+PATTERN:  Unknown
+LTL: <>(p && (! p || q) R (p || ! q))
+- <>(p && (! p || q) R (p || ! q))
+
+PATTERN:  Unknown
+LTL: !(<> r -> (p -> ! r U (q && ! r)) U r)
+- !(<> r -> (p -> ! r U (q && ! r)) U r)
+
+PATTERN:  Unknown
+LTL: [](p -> X <> q)
+- [](p -> X <> q)
+
+PATTERN:  Unknown
+LTL: p && [] (p -> X X p)
+- p && [] (p -> X X p)
+
+PATTERN:  Unknown
+LTL: <> [] (p U q)
+- <> [] (p U q)
+
+PATTERN:  Unknown
+LTL: <> [] (<> p -> q)
+- <> [] (<> p -> q)
+
+PATTERN:  Unknown
+LTL: [] (p -> [] (! p U q))
+- [] (p -> [] (! p U q))
+
+PATTERN:  Unknown
+LTL: [] (b -> X (a U b))
+- [] (b -> X (a U b))
+
+PATTERN:  Unknown
+LTL: <> a U [] b
+- <> a U [] b
+
+PATTERN:  Unknown
+LTL: [](<> p -> <> q)
+- [](<> p -> <> q)
+
+PATTERN:  Unknown
+LTL: [](p -> X <> (q || r))
+- [](p -> X <> (q || r))
+
+PATTERN:  Unknown
+LTL: [](p -> [] <> (q || r))
+- [](p -> [] <> (q || r))
+
+PATTERN:  Unknown
+LTL: []<> ! p && <> ! q
+- []<> ! p && <> ! q
+
+PATTERN:  Unknown
+LTL: X X [] p
+- X X [] p
+
+PATTERN:  Unknown
+LTL: [](p -> p U q U r)
+- [](p -> p U q U r)
+
+PATTERN:  Unknown
+LTL: ![] (p -> <> (q && <> r))
+- ![] (p -> <> (q && <> r))
+
+PATTERN:  Unknown
+LTL: [](p -> <> [] q)
+- [](p -> <> [] q)
+
+PATTERN:  Unknown
+LTL: ![] (p -> [] (q -> <> r))
+- ![] (p -> [] (q -> <> r))
+
+PATTERN:  Unknown
+LTL: !(<> p -> ! p U (q && ! p && X (! p U r)))
+- !(<> p -> ! p U (q && ! p && X (! p U r)))
+
+PATTERN:  Unknown
+LTL: ![] (p -> <> (q && X <> r))
+- ![] (p -> <> (q && X <> r))
+
+PATTERN:  Unknown
+LTL: <> [] a && [] <> q
+- <> [] a && [] <> q
