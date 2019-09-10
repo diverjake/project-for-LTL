@@ -22,4 +22,4 @@ LTL: [](call_Enqueue(d1) & (!return_Dequeue(d1) U call_Top_Down) ->
 PATTERN: Existence
 LTL: [](!POPServerMessageDelete) | 
      <>(POPServerMessageDelete & <>PlacedinMailboxes)
-- [](!p)|<>(p$<>PM)
+- [](!p)|<>(p&<>PM)
