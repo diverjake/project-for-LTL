@@ -332,4 +332,45 @@ LTL: <> (p && X p) && <> (q && X q)
 - <> (p && X p) && <> (q && X q)
 
 PATTERN:  Unknown
-LTL: 
+LTL: <>a & <>[]((a1 U XXa2) | (a3 U XXa4))
+- <>a & <>[]((a1 U XXa2) | (a3 U XXa4))
+
+PATTERN:  Unknown
+LTL: <>a & <>b & <>[]((a1 U XXa2) | (a3 U XXa4))
+- <>a & <>b & <>[]((a1 U XXa2) | (a3 U XXa4))
+
+PATTERN:  Unknown
+LTL: <>a & <>b & <>c & <>[]((a1 U XXa2) | (a3 U XXa4))
+- <>a & <>b & <>c & <>[]((a1 U XXa2) | (a3 U XXa4))
+
+PATTERN:  Unknown
+LTL: <>a & <>b & <>c & <>d & <>[]((a1 U XXa2) | (a3 U XXa4))
+- <>a & <>b & <>c & <>d & <>[]((a1 U XXa2) | (a3 U XXa4))
+
+PATTERN:  Unknown
+LTL: []((a U b) | (c U d))
+- []((a U b) | (c U d))
+
+PATTERN:  Unknown
+LTL: (x1 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & X[]((c2 U d2) | (a2 U b2)))
+- (x1 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & X[]((c2 U d2) | (a2 U b2)))
+
+PATTERN:  Unknown
+LTL: (x1 & x2 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & X[]((a3 U b3) | (c3 U d3)))
+- (x1 & x2 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & X[]((a3 U b3) | (c3 U d3)))
+
+PATTERN:  Unknown
+LTL: (x1 & x2 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & X[]((a3 U b3) | (c3 U d3))) | (!x1 & !x2 & X[]((a4 U b4) | (c4 U d4)))
+- (x1 & x2 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & X[]((a3 U b3) | (c3 U d3))) | (!x1 & !x2 & X[]((a4 U b4) | (c4 U d4)))
+
+PATTERN:  Unknown
+LTL: (x1 & x2 & x3 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & x3 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & x3 & X[]((a3 U b3) | (c3 U d3))) | (!x1 & !x2 & x3 & X[]((a4 U b4) | (c4 U d4))) | (x1 & x2 & !x3 & X[]((a5 U b5) | (c5 U d5)))
+- (x1 & x2 & x3 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & x3 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & x3 & X[]((a3 U b3) | (c3 U d3))) | (!x1 & !x2 & x3 & X[]((a4 U b4) | (c4 U d4))) | (x1 & x2 & !x3 & X[]((a5 U b5) | (c5 U d5)))
+
+PATTERN:  Unknown
+LTL: (x1 & x2 & x3 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & x3 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & x3 & X[]((a3 U b3) | (c3 U d3))) | (!x1 & !x2 & x3 & X[]((a4 U b4) | (c4 U d4))) | (x1 & x2 & !x3 & X[]((a5 U b5) | (c5 U d5))) | (!x1 & x2 & !x3 & X[]((a6 U b6) | (c6 U d6)))
+- (x1 & x2 & x3 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & x3 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & x3 & X[]((a3 U b3) | (c3 U d3))) | (!x1 & !x2 & x3 & X[]((a4 U b4) | (c4 U d4))) | (x1 & x2 & !x3 & X[]((a5 U b5) | (c5 U d5))) | (!x1 & x2 & !x3 & X[]((a6 U b6) | (c6 U d6)))
+
+PATTERN:  Unknown
+LTL: (x1 & x2 & x3 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & x3 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & x3 & X[]((a3 U b3) | (c3 U d3))) | (!x1 & !x2 & x3 & X[]((a4 U b4) | (c4 U d4))) | (x1 & x2 & !x3 & X[]((a5 U b5) | (c5 U d5))) | (!x1 & x2 & !x3 & X[]((a6 U b6) | (c6 U d6))) | (x1 & !x2 & !x3 & X[]((c6 U d6) | (a7 U b7)))
+- (x1 & x2 & x3 & X[]((a1 U b1) | (c2 U d2))) | (!x1 & x2 & x3 & X[]((c2 U d2) | (a2 U b2))) | (x1 & !x2 & x3 & X[]((a3 U b3) | (c3 U d3))) | (!x1 & !x2 & x3 & X[]((a4 U b4) | (c4 U d4))) | (x1 & x2 & !x3 & X[]((a5 U b5) | (c5 U d5))) | (!x1 & x2 & !x3 & X[]((a6 U b6) | (c6 U d6))) | (x1 & !x2 & !x3 & X[]((c6 U d6) | (a7 U b7)))
