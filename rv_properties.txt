@@ -350,3 +350,11 @@ LTL: <>a & <>b & <>c & <>d & <>[]((a1 U XXa2) | (a3 U XXa4))
 PATTERN:  Unknown
 LTL: []((a U b) | (c U d))
 - []((a U b) | (c U d))
+
+PATTERN:  Unknown
+LTL: [](r0 -> <>g0)
+- [](r0 -> <>g0)
+
+PATTERN:  Unknown
+LTL: []((!g0 | !g1) & (r0 -> <>g0) & (r1 -> <>g1))
+- []((!g0 | !g1) & (r0 -> <>g0) & (r1 -> <>g1))
