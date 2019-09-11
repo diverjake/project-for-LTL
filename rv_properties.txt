@@ -1025,3 +1025,19 @@ PATTERN:  Unknown lpar19
 LTL: [](!a | []!b | ((!c | (!b U (!b & d & e & X((!b & e) U f)))) U b))
 - [](!a | []!b | ((!c | (!b U (!b & d & e & X((!b & e) U f)))) U b))
 
+PATTERN:  Unknown lpar19
+LTL: []((c U ([]c | (c & <>d))) U (<>d | (X(!d | []!b) & ([](!b U !a) U ([](!b U !a) | ([](!b U !a) & <>!b))))))
+- []((c U ([]c | (c & <>d))) U (<>d | (X(!d | []!b) & ([](!b U !a) U ([](!b U !a) | ([](!b U !a) & <>!b))))))
+
+PATTERN:  Unknown lpar19
+LTL: []!a | ((!a & !b) U (a | ((!a & b) U (a | ((!a & !b) U (a | ((!a & b) U (a | (!b U a)))))))))
+- []!a | ((!a & !b) U (a | ((!a & b) U (a | ((!a & !b) U (a | ((!a & b) U (a | (!b U a)))))))))
+
+PATTERN:  Unknown lpar19
+LTL: []!a | (!a U (a & ([]!b | (!b U ([]b | (b U ([]!b | (!b U ([]b | (b U []!b))))))))))
+- []!a | (!a U (a & ([]!b | (!b U ([]b | (b U ([]!b | (!b U ([]b | (b U []!b))))))))))
+
+PATTERN:  Unknown lpar19
+LTL: [](!a | []!b | ((!b & !c) U (b | ((!b & c) U (b | ((!b & !c) U (b | ((!b & c) U (b | (!c U b))))))))))
+- [](!a | []!b | ((!b & !c) U (b | ((!b & c) U (b | ((!b & !c) U (b | ((!b & c) U (b | (!c U b))))))))))
+
