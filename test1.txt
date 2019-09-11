@@ -1,53 +1,256 @@
-PATTERN:  Unknown
-LTL: [](<>!a & <>(b & X!c) & []<>(a U d)) & []<>(Xd U (b | []c))
-- [](<>!a & <>(b & X!c) & []<>(a U d)) & []<>(Xd U (b | []c))
 
 PATTERN:  Unknown
-LTL: []<>(a & XXb) U ([]<>(b & Xc) & []<>(c & XXa))
-- []<>(a & XXb) U ([]<>(b & Xc) & []<>(c & XXa))
+LTL: [](a -> <>b)
+- [](a -> <>b)
 
 PATTERN:  Unknown
-LTL: []<>(a & XXb) U ([]<>(b & Xc) U []<>(c & XXa))
-- []<>(a & XXb) U ([]<>(b & Xc) U []<>(c & XXa))
+LTL: ([]<>a & []<>b) -> []<>c
+- ([]<>a & []<>b) -> []<>c
 
 PATTERN:  Unknown
-LTL: ([]<>(a & XXb) U []<>(b & Xc)) U []<>(c & XXa)
-- ([]<>(a & XXb) U []<>(b & Xc)) U []<>(c & XXa)
+LTL: [](a -> (b & (c U d)))
+- [](a -> (b & (c U d)))
 
 PATTERN:  Unknown
-LTL: [](a & (Xb | <>b))
-- [](a & (Xb | <>b))
+LTL: (a U b) -> ((c U d) | []c)
+- (a U b) -> ((c U d) | []c)
 
 PATTERN:  Unknown
-LTL: <>(a & (Xb | []c))
-- <>(a & (Xb | []c))
+LTL: [](a -> (!b U (b U (!b & (c R !b)))))
+- [](a -> (!b U (b U (!b & (c R !b)))))
 
 PATTERN:  Unknown
-LTL: ([]<>a | <>[]b) & ([]<>c | <>[]d)
-- ([]<>a | <>[]b) & ([]<>c | <>[]d)
+LTL: [](a -> (b R c))
+- [](a -> (b R c))
 
 PATTERN:  Unknown
-LTL: ([]<>a | <>[]b) & ([]<>c | <>[](d | Xe))
-- ([]<>a | <>[]b) & ([]<>c | <>[](d | Xe))
+LTL: [](!a -> <>a)
+- [](!a -> <>a)
 
 PATTERN:  Unknown
-LTL: (a & ([]<>a | <>[]b) & ([]<>c | <>[]d)) | (!a & ([]<>e | <>[]f) & ([]<>g | <>[]h))
-- (a & ([]<>a | <>[]b) & ([]<>c | <>[]d)) | (!a & ([]<>e | <>[]f) & ([]<>g | <>[]h))
+LTL: !(a U b) & [](c -> !(a U b))
+- !(a U b) & [](c -> !(a U b))
 
 PATTERN:  Unknown
-LTL: (a & ([]<>a | <>[]b) & ([]<>c | <>[]d)) | (!a & ([]<>e | <>[]f))
-- (a & ([]<>a | <>[]b) & ([]<>c | <>[]d)) | (!a & ([]<>e | <>[]f))
+LTL: []a -> []b
+- []a -> []b
 
 PATTERN:  Unknown
-LTL: a & ([]<>a | <>[]b) & ([]<>c | <>[]d)
-- a & ([]<>a | <>[]b) & ([]<>c | <>[]d)
+LTL: [](a -> ([]!b | (c U b)))
+- [](a -> ([]!b | (c U b)))
 
 PATTERN:  Unknown
-LTL: ([]<>(a & Xb) | <>[](b | X!a)) & ([]<>(b & Xc) | <>[](!c | Xa)) & ([]<>(b & XXa) | <>[](!c | X!b))
-- ([]<>(a & Xb) | <>[](b | X!a)) & ([]<>(b & Xc) | <>[](!c | Xa)) & ([]<>(b & XXa) | <>[](!c | X!b))
+LTL: [](a -> (b R (b | c)))
+- [](a -> (b R (b | c)))
 
 PATTERN:  Unknown
-LTL: ([]<>(a & Xb) | <>[](b | X!a)) & ([]<>(b & Xc) | <>[](!c | Xa)) & ([]<>(b & XXa) | <>[](!c | X!b)) & ([]<>(b & XX!c) | <>[](!a | X!b))
-- ([]<>(a & Xb) | <>[](b | X!a)) & ([]<>(b & Xc) | <>[](!c | Xa)) & ([]<>(b & XXa) | <>[](!c | X!b)) & ([]<>(b & XX!c) | <>[](!a | X!b))
+LTL: []((a & b) -> (!b R (a | !b)))
+- []((a & b) -> (!b R (a | !b)))
+
+PATTERN:  Unknown
+LTL: [](a -> (!b U (b U (b & c))))
+- [](a -> (!b U (b U (b & c))))
+
+PATTERN:  Unknown
+LTL: [](a -> (!b U (b U (!b U (b U (b & c))))))
+- [](a -> (!b U (b U (!b U (b U (b & c))))))
+
+PATTERN:  Unknown
+LTL: []<>a -> []<>b
+- []<>a -> []<>b
+
+PATTERN:  Unknown
+LTL: []<>(a | b) & []<>(b | c)
+- []<>(a | b) & []<>(b | c)
+
+PATTERN:  Unknown
+LTL: <>a -> (b U a)
+- <>a -> (b U a)
+
+PATTERN:  Unknown
+LTL: [](a -> []b)
+- [](a -> []b)
+
+PATTERN:  Unknown
+LTL: []((a & !b & <>b) -> (c U b))
+- []((a & !b & <>b) -> (c U b))
+
+PATTERN:  Unknown
+LTL: [](a | b | []c | (c U b))
+- [](a | b | []c | (c U b))
+
+PATTERN:  Unknown
+LTL: []a | (a U (a & b))
+- []a | (a U (a & b))
+
+PATTERN:  Unknown
+LTL: []!a | <>(a & <>b)
+- []!a | <>(a & <>b)
+
+PATTERN:  Unknown
+LTL: [](a | b | []!b | (!b U (!b & c)))
+- [](a | b | []!b | (!b U (!b & c)))
+
+PATTERN:  Unknown
+LTL: []((a & b) -> (b U (b & c)))
+- []((a & b) -> (b U (b & c)))
+
+PATTERN:  Unknown
+LTL: (a U b) | []a
+- (a U b) | []a
+
+PATTERN:  Unknown
+LTL: <>a -> (b U (a | c))
+- <>a -> (b U (a | c))
+
+PATTERN:  Unknown
+LTL: []!a | <>(a & ([]b | (b U c)))
+- []!a | <>(a & ([]b | (b U c)))
+
+PATTERN:  Unknown
+LTL: []((a & !b & <>b) -> (c U (b | d)))
+- []((a & !b & <>b) -> (c U (b | d)))
+
+PATTERN:  Unknown
+LTL: [](a | b | []c | (c U (b | d)))
+- [](a | b | []c | (c U (b | d)))
+
+PATTERN:  Unknown
+LTL: <>a -> ((b -> (!a U (!a & c))) U a)
+- <>a -> ((b -> (!a U (!a & c))) U a)
+
+PATTERN:  Unknown
+LTL: [](a -> [](b -> <>c)
+- [](a -> [](b -> <>c)
+
+PATTERN:  Unknown
+LTL: []((a & !b & <>b) -> ((c -> (!b U (!b & d))) U b))
+- []((a & !b & <>b) -> ((c -> (!b U (!b & d))) U b))
+
+PATTERN:  Unknown
+LTL: [](a | b | [](c | (!b U (!b & d))) | ((c | (!b U (!b & d))) U b))
+- [](a | b | [](c | (!b U (!b & d))) | ((c | (!b U (!b & d))) U b))
+
+PATTERN:  Unknown
+LTL: <>a -> (!a U (!a & b & X(!a U c)))
+- <>a -> (!a U (!a & b & X(!a U c)))
+
+PATTERN:  Unknown
+LTL: <>a -> (b U (a | (b & c & X(b U d))))
+- <>a -> (b U (a | (b & c & X(b U d))))
+
+PATTERN:  Unknown
+LTL: []!a | (!a U ((a & <>b) -> (!b U (!b & c & X(!b U d)))))
+- []!a | (!a U ((a & <>b) -> (!b U (!b & c & X(!b U d)))))
+
+PATTERN:  Unknown
+LTL: []((a & <>b) -> (c U (b | (c & d & X(c U e)))))
+- []((a & <>b) -> (c U (b | (c & d & X(c U e)))))
+
+PATTERN:  Unknown
+LTL: [](a -> (<>b -> (!b U (c | (!b & d & X(!b U e))))))
+- [](a -> (<>b -> (!b U (c | (!b & d & X(!b U e))))))
+
+PATTERN:  Unknown
+LTL: <>(a & X<>b) -> (!a U c)
+- <>(a & X<>b) -> (!a U c)
+
+PATTERN:  Unknown
+LTL: <>a -> (!(!a & b & X(!a U (!a & c))) U (a | d))
+- <>a -> (!(!a & b & X(!a U (!a & c))) U (a | d))
+
+PATTERN:  Unknown
+LTL: []!a | (!a U (a & (<>(b & X<>c) -> (!b U d))))
+- []!a | (!a U (a & (<>(b & X<>c) -> (!b U d))))
+
+PATTERN:  Unknown
+LTL: []((a & <>b) -> (!(!b & c & X(!b U (!b & d))) U (b | e)))
+- []((a & <>b) -> (!(!b & c & X(!b U (!b & d))) U (b | e)))
+
+PATTERN:  Unknown
+LTL: [](a -> ((!(b & !c & X(!c U (!c & d))) U (c | e)) | []!(b & X<>d)))
+- [](a -> ((!(b & !c & X(!c U (!c & d))) U (c | e)) | []!(b & X<>d)))
+
+PATTERN:  Unknown
+LTL: []((a & X<>b) -> X<>(b & <>c))
+- []((a & X<>b) -> X<>(b & <>c))
+
+PATTERN:  Unknown
+LTL: <>a -> (((b & X(!a U c)) -> X(!a U (c & <>d))) U a)
+- <>a -> (((b & X(!a U c)) -> X(!a U (c & <>d))) U a)
+
+PATTERN:  Unknown
+LTL: [](a -> []((b & X<>c) -> X(!c U (c & <>d))))
+- [](a -> []((b & X<>c) -> X(!c U (c & <>d))))
+
+PATTERN:  Unknown
+LTL: []((a & <>b) -> (((c & X(!b U d)) -> X(!b U (d & <>e))) U b))
+- []((a & <>b) -> (((c & X(!b U d)) -> X(!b U (d & <>e))) U b))
+
+PATTERN:  Unknown
+LTL: [](a -> <>(b & X<>c))
+- [](a -> <>(b & X<>c))
+
+PATTERN:  Unknown
+LTL: <>a -> ((b -> (!a U (!a & c & X(!a U d)))) U a)
+- <>a -> ((b -> (!a U (!a & c & X(!a U d)))) U a)
+
+PATTERN:  Unknown
+LTL: [](a -> [](b -> (c & X<>d)))
+- [](a -> [](b -> (c & X<>d)))
+
+PATTERN:  Unknown
+LTL: []((a & <>b) -> ((c -> (!b U (!b & d & X(!b U e)))) U b))
+- []((a & <>b) -> ((c -> (!b U (!b & d & X(!b U e)))) U b))
+
+PATTERN:  Unknown
+LTL: [](a -> ((b -> (!c U (!c & d & X(!c U e)))) U (c | [](b -> (d & X<>e)))))
+- [](a -> ((b -> (!c U (!c & d & X(!c U e)))) U (c | [](b -> (d & X<>e)))))
+
+PATTERN:  Unknown
+LTL: [](a -> <>(b & c & X(c U d)))
+- [](a -> <>(b & c & X(c U d)))
+
+PATTERN:  Unknown
+LTL: <>a -> ((b -> (!a U (!a & c & d & X((!a & d) U e)))) U a)
+- <>a -> ((b -> (!a U (!a & c & d & X((!a & d) U e)))) U a)
+
+PATTERN:  Unknown
+LTL: [](a -> [](b -> (c & d & X(d U e))))
+- [](a -> [](b -> (c & d & X(d U e))))
+
+PATTERN:  Unknown
+LTL: []((a & <>b) -> ((c -> (!b U (!b & d & e & X((!b & e) U f)))) U b))
+- []((a & <>b) -> ((c -> (!b U (!b & d & e & X((!b & e) U f)))) U b))
+
+PATTERN:  Unknown
+LTL: [](a -> ((b -> (!c U (!c & d & e & X((!c & e) U f)))) U (c | [](b -> (d & e & X(e U f))))))
+- [](a -> ((b -> (!c U (!c & d & e & X((!c & e) U f)))) U (c | [](b -> (d & e & X(e U f))))))
+
+PATTERN:  Unknown
+LTL: [](a -> (((b & X(!c U d)) -> X(!c U (d & <>e))) U (c | []((b & X(!c U d)) -> X(!c U (d & <>e))))))
+- [](a -> (((b & X(!c U d)) -> X(!c U (d & <>e))) U (c | []((b & X(!c U d)) -> X(!c U (d & <>e))))))
+
+PATTERN:  Unknown
+LTL: []!a | (!a U ([]a | (a U ([]!a | (!a U ([]a | (a U []!a)))))))
+- []!a | (!a U ([]a | (a U ([]!a | (!a U ([]a | (a U []!a)))))))
+
+PATTERN:  Unknown
+LTL: <>a -> ((!a & !b) U (a | ((!a & b) U (a | ((!a & !b) U (a | ((!a & b) U (a | (!b U a)))))))))
+- <>a -> ((!a & !b) U (a | ((!a & b) U (a | ((!a & !b) U (a | ((!a & b) U (a | (!b U a)))))))))
+
+PATTERN:  Unknown
+LTL: [](a | ((!b & !c) U (c | ((b & !c) U (c | ((!b & !c) U (c | ((b & !c) U (c | []b | []!b | (!b U c))))))))))
+- [](a | ((!b & !c) U (c | ((b & !c) U (c | ((!b & !c) U (c | ((b & !c) U (c | []b | []!b | (!b U c))))))))))
+
+PATTERN:  Unknown
+LTL: []!a | (!a U (a & ([]!b | (!b U ([]b | (b U ([]!b | (!b U ([]b | (b U []!b))))))))))
+[]((a & <>b) -> ((!b & !c) U (b | ((!b & c) U (b | ((!b & !c) U (b | ((!b & c) U (b | (!c U b))))))))))
+- []!a | (!a U (a & ([]!b | (!b U ([]b | (b U ([]!b | (!b U ([]b | (b U []!b))))))))))
+[]((a & <>b) -> ((!b & !c) U (b | ((!b & c) U (b | ((!b & !c) U (b | ((!b & c) U (b | (!c U b))))))))))
+
+PATTERN:  Unknown
+LTL: 
+
 
 
