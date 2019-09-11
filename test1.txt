@@ -1,36 +1,50 @@
-PATTERN:  Unknown router
-LTL: [](!p1 & (p2 U (!p2 U (!p3 | p4))))
-- [](!p1 & (p2 U (!p2 U (!p3 | p4))))
+PATTERN:  Unknown rabinizer3
+LTL: <>p U []q
+- <>p U []q
 
-PATTERN:  Unknown router
-LTL: [](!q | []p | (!p U (r | (!p & s & X(!p U t)))))
-- [](!q | []p | (!p U (r | (!p & s & X(!p U t)))))
+PATTERN:  Unknown rabinizer3
+LTL: ((p | q) U p) | []q
+- ((p | q) U p) | []q
 
-PATTERN:  Unknown router
-LTL: [](!q | ((!p | (!r U (!r & s & X(!r U t)))) U (r | [](!p | (s & X<>t)))))
-- [](!q | ((!p | (!r U (!r & s & X(!r U t)))) U (r | [](!p | (s & X<>t)))))
+PATTERN:  Unknown rabinizer3
+LTL: []p U q
 
-PATTERN:  Unknown router
-LTL: [](!q | ((r | !s | X([](r | !t) | (!r U (r & (r | !t))))) U (p | r)) | [](!s | X[]!t))
-- [](!q | ((r | !s | X([](r | !t) | (!r U (r & (r | !t))))) U (p | r)) | [](!s | X[]!t))
+PATTERN:  Unknown rabinizer3
+LTL: [](q | X[]p) & [](r | X[]!p)
+- [](q | X[]p) & [](r | X[]!p)
 
-PATTERN:  Unknown router
-LTL: []((p1 & X!p1) | X(p1 U (p1 & !p2 & X(p1 & p2 & (p1 U (p1 & !p2 & X(p1 & p2)))))))
-- []((p1 & X!p1) | X(p1 U (p1 & !p2 & X(p1 & p2 & (p1 U (p1 & !p2 & X(p1 & p2)))))))
+PATTERN:  Unknown rabinizer3
+LTL: [](!p | <>q) & ((Xp U q) | X(((!p | !q) U !p) | [](!p | !q)))
+- [](!p | <>q) & ((Xp U q) | X(((!p | !q) U !p) | [](!p | !q)))
 
-PATTERN:  Unknown router
-LTL: [](!q | ((!s | X([]!t | (!r U (r & !t))) | X(!r U (r & <>p))) U (r | [](!s | X([]!t | (!r U (r & !t))) | X(!r U (t & <>p))))))
-- [](!q | ((!s | X([]!t | (!r U (r & !t))) | X(!r U (r & <>p))) U (r | [](!s | X([]!t | (!r U (r & !t))) | X(!r U (t & <>p))))))
+PATTERN:  Unknown rabinizer3
+LTL: X([]r | (r U (r & (s U p)))) U ([]r | (r U (r & s)))
+- X([]r | (r U (r & (s U p)))) U ([]r | (r U (r & s)))
+
+PATTERN:  Unknown rabinizer3
+LTL: p U (q & X(r & <>(s & X<>(t & X<>(u & X<>v)))))
+- p U (q & X(r & <>(s & X<>(t & X<>(u & X<>v)))))
+
+PATTERN:  Unknown rabinizer3
+LTL: ([]<>(a & XXb) | <>[]b) & <>[](c | (XXb & Xa))
+- ([]<>(a & XXb) | <>[]b) & <>[](c | (XXb & Xa))
+
+PATTERN:  Unknown rabinizer3
+LTL: []<>(XXXa & XXXXb) & []<>(b | Xc) & []<>(c & XXa)
+- []<>(XXXa & XXXXb) & []<>(b | Xc) & []<>(c & XXa)
+
+PATTERN:  Unknown rabinizer3
+LTL: ([]<>a | <>[]b) & ([]<>c | <>[](d | Xe))
+- ([]<>a | <>[]b) & ([]<>c | <>[](d | Xe))
+
+PATTERN:  Unknown rabinizer3
+LTL: ([]<>(a & XXc) | <>[]b) & ([]<>c | <>[](d | (Xa & XXb)))
+- ([]<>(a & XXc) | <>[]b) & ([]<>c | <>[](d | (Xa & XXb)))
+
+PATTERN:  Unknown rabinizer3
+LTL: ((a U b) & ([]<>a | <>[]b) & ([]<>c | <>[]d)) | ((a U c) & ([]<>a | <>[]d) & (<>[]b | []<>c))
+- ((a U b) & ([]<>a | <>[]b) & ([]<>c | <>[]d)) | ((a U c) & ([]<>a | <>[]d) & (<>[]b | []<>c))
 
 PATTERN:  Unknown router
 LTL: [](!q | ((!p | (!r U (!r & s & !z & X((!r & !z) U t)))) U (r | [](!p | (s & !z & X(!z U t))))))
 - [](!q | ((!p | (!r U (!r & s & !z & X((!r & !z) U t)))) U (r | [](!p | (s & !z & X(!z U t))))))
-
-PATTERN:  Unknown router
-LTL: 
-
-PATTERN:  Unknown
-LTL: 
-
-PATTERN:  Unknown
-LTL: 
