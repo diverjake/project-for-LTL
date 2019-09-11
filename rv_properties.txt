@@ -713,3 +713,45 @@ LTL: [](a -> (<>b -> (!b U (c | (!b & d & X(!b U e))))))
 PATTERN:  Unknown
 LTL: <>a -> ((b -> (!a U (!a & c))) U a)
 - <>a -> ((b -> (!a U (!a & c))) U a)
+
+PATTERN:  Unknown
+LTL: <>a -> (!(!a & b & X(!a U (!a & c))) U (a | d))
+- <>a -> (!(!a & b & X(!a U (!a & c))) U (a | d))
+
+PATTERN:  Unknown
+LTL: []((a & <>b) -> (!(!b & c & X(!b U (!b & d))) U (b | e)))
+- []((a & <>b) -> (!(!b & c & X(!b U (!b & d))) U (b | e)))
+
+PATTERN:  Unknown
+LTL: <>a -> (((b & X(!a U c)) -> X(!a U (c & <>d))) U a)
+- <>a -> (((b & X(!a U c)) -> X(!a U (c & <>d))) U a)
+
+PATTERN:  Unknown
+LTL: []((a & <>b) -> (((c & X(!b U d)) -> X(!b U (d & <>e))) U b))
+- []((a & <>b) -> (((c & X(!b U d)) -> X(!b U (d & <>e))) U b))
+
+PATTERN:  Unknown
+LTL: <>a -> ((b -> (!a U (!a & c & X(!a U d)))) U a)
+- <>a -> ((b -> (!a U (!a & c & X(!a U d)
+
+PATTERN:  Unknown
+LTL: []((a & <>b) -> ((c -> (!b U (!b & d & X(!b U e)))) U b))
+- []((a & <>b) -> ((c -> (!b U (!b & d & X(!b U e)))) U b))
+
+PATTERN:  Unknown
+LTL: [](a -> <>(b & c & X(c U d)))
+- [](a -> <>(b & c & X(c U d)))
+
+PATTERN:  Unknown
+LTL: <>a -> ((b -> (!a U (!a & c & d & X((!a & d) U e)))) U a)
+- <>a -> ((b -> (!a U (!a & c & d & X((!a & d) U e)))) U a)
+
+PATTERN:  Unknown
+LTL: [](a -> [](b -> (c & d & X(d U e))))
+- [](a -> [](b -> (c & d & X(d U e))))
+
+PATTERN:  Unknown
+LTL: []((a & <>b) -> ((c -> (!b U (!b & d & e & X((!b & e) U f)))) U b))
+- []((a & <>b) -> ((c -> (!b U (!b & d & e & X((!b & e) U f)))) U b))
+
+
