@@ -1,41 +1,32 @@
-PATTERN:  Unknown
-LTL: 
-
-PATTERN:  Unknown
-LTL: 
-
-PATTERN:  Unknown
-LTL: 
-
-PATTERN:  Unknown
+PATTERN:  Unknown router
 LTL: [](!p1 & (p2 U (!p2 U (!p3 | p4))))
 - [](!p1 & (p2 U (!p2 U (!p3 | p4))))
 
-PATTERN:  Unknown
+PATTERN:  Unknown router
 LTL: [](!q | []p | (!p U (r | (!p & s & X(!p U t)))))
 - [](!q | []p | (!p U (r | (!p & s & X(!p U t)))))
 
-PATTERN:  Unknown
+PATTERN:  Unknown router
 LTL: [](!q | ((!p | (!r U (!r & s & X(!r U t)))) U (r | [](!p | (s & X<>t)))))
 - [](!q | ((!p | (!r U (!r & s & X(!r U t)))) U (r | [](!p | (s & X<>t)))))
 
-PATTERN:  Unknown
+PATTERN:  Unknown router
 LTL: [](!q | ((r | !s | X([](r | !t) | (!r U (r & (r | !t))))) U (p | r)) | [](!s | X[]!t))
 - [](!q | ((r | !s | X([](r | !t) | (!r U (r & (r | !t))))) U (p | r)) | [](!s | X[]!t))
 
-PATTERN:  Unknown
+PATTERN:  Unknown router
 LTL: []((p1 & X!p1) | X(p1 U (p1 & !p2 & X(p1 & p2 & (p1 U (p1 & !p2 & X(p1 & p2)))))))
 - []((p1 & X!p1) | X(p1 U (p1 & !p2 & X(p1 & p2 & (p1 U (p1 & !p2 & X(p1 & p2)))))))
 
-PATTERN:  Unknown
+PATTERN:  Unknown router
 LTL: [](!q | ((!s | X([]!t | (!r U (r & !t))) | X(!r U (r & <>p))) U (r | [](!s | X([]!t | (!r U (r & !t))) | X(!r U (t & <>p))))))
 - [](!q | ((!s | X([]!t | (!r U (r & !t))) | X(!r U (r & <>p))) U (r | [](!s | X([]!t | (!r U (r & !t))) | X(!r U (t & <>p))))))
 
-PATTERN:  Unknown
+PATTERN:  Unknown router
 LTL: [](!q | ((!p | (!r U (!r & s & !z & X((!r & !z) U t)))) U (r | [](!p | (s & !z & X(!z U t))))))
 - [](!q | ((!p | (!r U (!r & s & !z & X((!r & !z) U t)))) U (r | [](!p | (s & !z & X(!z U t))))))
 
-PATTERN:  Unknown
+PATTERN:  Unknown router
 LTL: 
 
 PATTERN:  Unknown
