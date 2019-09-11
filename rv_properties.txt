@@ -517,3 +517,19 @@ LTL: [](p -> <>q) -> []<>acc
 PATTERN:  Unknown
 LTL: ([]<>p | []<>q | []<>r) -> []<>acc
 - ([]<>p | []<>q | []<>r) -> []<>acc
+
+PATTERN:  Unknown
+LTL: (p U (q & X(r U s))) -> []<>acc
+- (p U (q & X(r U s))) -> []<>acc
+
+PATTERN:  Unknown
+LTL: [](p -> (q U r)) -> []<>acc
+- [](p -> (q U r)) -> []<>acc
+
+PATTERN:  Unknown
+LTL: ((p U (q U r)) & (q U (r U p)) & (r U (p U q))) -> []<>acc
+- ((p U (q U r)) & (q U (r U p)) & (r U (p U q))) -> []<>acc
+
+PATTERN:  Unknown
+LTL: <>(q & X(p U r)) -> []<>acc
+- <>(q & X(p U r)) -> []<>acc
