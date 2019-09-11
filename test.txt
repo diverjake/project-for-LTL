@@ -1,24 +1,22 @@
 PATTERN:  Unknown
-LTL: <> (p && X p) && <> (q && X q)
-- <> (p && X p) && <> (q && X q)
+LTL: [](r0 -> <>g0)
+- [](r0 -> <>g0)
 
 PATTERN:  Unknown
-LTL: <>a & <>[]((a1 U XXa2) | (a3 U XXa4))
-- <>a & <>[]((a1 U XXa2) | (a3 U XXa4))
+LTL: []((!g0 | !g1) & (r0 -> <>g0) & (r1 -> <>g1))
+- []((!g0 | !g1) & (r0 -> <>g0) & (r1 -> <>g1))
 
 PATTERN:  Unknown
-LTL: <>a & <>b & <>[]((a1 U XXa2) | (a3 U XXa4))
-- <>a & <>b & <>[]((a1 U XXa2) | (a3 U XXa4))
+LTL: [](((!g0 & !g1) | (!g2 & (!g0 | !g1))) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2))
+- [](((!g0 & !g1) | (!g2 & (!g0 | !g1))) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2))
 
 PATTERN:  Unknown
-LTL: <>a & <>b & <>c & <>[]((a1 U XXa2) | (a3 U XXa4))
-- <>a & <>b & <>c & <>[]((a1 U XXa2) | (a3 U XXa4))
+LTL: [](((!g0 & !g1 & (!g2 | !g3)) | (!g2 & !g3 & (!g0 | !g1))) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (r3 -> <>g3))
+- [](((!g0 & !g1 & (!g2 | !g3)) | (!g2 & !g3 & (!g0 | !g1))) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (r3 -> <>g3))
 
 PATTERN:  Unknown
-LTL: <>a & <>b & <>c & <>d & <>[]((a1 U XXa2) | (a3 U XXa4))
-- <>a & <>b & <>c & <>d & <>[]((a1 U XXa2) | (a3 U XXa4))
+LTL: [](((!g0 & !g1 & !g2 & (!g3 | !g4)) | (!g3 & !g4 & ((!g0 & !g1) | (!g2 & (!g0 | !g1))))) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (r3 -> <>g3) & (r4 -> <>g4))
+- [](((!g0 & !g1 & !g2 & (!g3 | !g4)) | (!g3 & !g4 & ((!g0 & !g1) | (!g2 & (!g0 | !g1))))) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (r3 -> <>g3) & (r4 -> <>g4))
 
 PATTERN:  Unknown
-LTL: []((a U b) | (c U d))
-- []((a U b) | (c U d))
-
+LTL: 
