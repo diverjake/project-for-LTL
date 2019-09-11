@@ -32,14 +32,6 @@ LTL: [](a -> ([]!b | (c U b)))
 - [](a -> ([]!b | (c U b)))
 
 PATTERN:  Unknown
-LTL: [](a -> (b R (b | c)))
-- [](a -> (b R (b | c)))
-
-PATTERN:  Unknown
-LTL: []((a & b) -> (!b R (a | !b)))
-- []((a & b) -> (!b R (a | !b)))
-
-PATTERN:  Unknown
 LTL: [](a -> (!b U (b U (b & c))))
 - [](a -> (!b U (b U (b & c))))
 
@@ -248,6 +240,14 @@ LTL: [](a -> (!b U (b U (!b & (c R !b)))))
 PATTERN:  Unknown
 LTL: [](a -> (b R c))
 - [](a -> (b R c))
+
+PATTERN:  Unknown
+LTL: [](a -> (b R (b | c)))
+- [](a -> (b R (b | c)))
+
+PATTERN:  Unknown
+LTL: []((a & b) -> (!b R (a | !b)))
+- []((a & b) -> (!b R (a | !b)))
 
 PATTERN:  Unknown
 LTL: 
