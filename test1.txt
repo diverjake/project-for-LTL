@@ -1,75 +1,40 @@
-PATTERN:  Unknown lpar19
-LTL: XX(X<>c | []<>[](<>[]c U ((<>c & <>[]c) | []<>[]c))) U d
-- XX(X<>c | []<>[](<>[]c U ((<>c & <>[]c) | []<>[]c))) U d
+PATTERN:  Unknown daniel
+LTL: a && !a
+- a && !a
 
-PATTERN:  Unknown lpar19
-LTL: Xb | XX([](a & <>!c & []<>(!b & c)) U (!b & !c))
-- Xb | XX([](a & <>!c & []<>(!b & c)) U (!b & !c))
+PATTERN:  Unknown daniel
+LTL: <> [] a && <>!<>a
+- <> [] a && <>!<>a
 
-PATTERN:  Unknown lpar19
-LTL: [](((!a | b | Xb) & []X<>[]a) | X[]((!b & d) | (b & !d)))
-- [](((!a | b | Xb) & []X<>[]a) | X[]((!b & d) | (b & !d)))
+PATTERN:  Unknown daniel
+LTL: [] a && [] !a
+- [] a && [] !a
 
-PATTERN:  Unknown lpar19
-LTL: X(c & <>a & (<>(d & []b) | []<>(b U ((b & c) | []b))))
-- X(c & <>a & (<>(d & []b) | []<>(b U ((b & c) | []b))))
+PATTERN:  Unknown daniel
+LTL: [] a ||[] !a
+- [] a ||[] !a
 
-PATTERN:  Unknown lpar19
-LTL: <>(X<>!c | (X((b & d) | (!b & !d)) U (!b & <>d)))
-- <>(X<>!c | (X((b & d) | (!b & !d)) U (!b & <>d)))
+PATTERN:  Unknown daniel
+LTL: [] a || <> ! <> a
+- [] a || <> ! <> a
 
-PATTERN:  Unknown lpar19
-LTL: ([]!a & <>!c) | (<>a & []c) | (!a U ([]!a | (!a & []!d)))
-- ([]!a & <>!c) | (<>a & []c) | (!a U ([]!a | (!a & []!d)))
+PATTERN:  Unknown daniel
+LTL: [] a || ! <> ! <> a 
+- [] a || ! <> ! <> a 
 
-PATTERN:  Unknown lpar19
-LTL: <>[]!c | (X<>b & (d | Xd | []<>Xd)) | (!d & X!d & X[]!b & <>[]X!d)
-- <>[]!c | (X<>b & (d | Xd | []<>Xd)) | (!d & X!d & X[]!b & <>[]X!d)
+PATTERN:  Unknown daniel
+LTL: a||!a 
+- a||!a 
 
-PATTERN:  Unknown lpar19
-LTL: []((<>!c U !b) & <>((!a & !c & <>!b) U <>!d))
-- []((<>!c U !b) & <>((!a & !c & <>!b) U <>!d))
+PATTERN:  Unknown daniel
+LTL: ([]s && []!s)->(<>[]s && <> !<>s)
+- ([]s && []!s)->(<>[]s && <> !<>s)
 
-PATTERN:  Unknown lpar19
-LTL: (([](!a | d) U []a) U (b | c)) | []((c & d) | X[]<>!d)
-- (([](!a | d) U []a) U (b | c)) | []((c & d) | X[]<>!d)
+PATTERN:  Unknown daniel
+LTL: a R a
+- a R a
 
-PATTERN:  Unknown lpar19
-LTL: []<>X([]<>(b & c) & ([]!b U ([]!b | ([]!b & [](b & <>X!b)))))
-- []<>X([]<>(b & c) & ([]!b U ([]!b | ([]!b & [](b & <>X!b)))))
-
-PATTERN:  Unknown lpar19
-LTL: []([]b | ([]<>[]<>[]!b U ([]<>[]<>[]!b | ([]<>[]<>[]!b & (!a U !d)))))
-- []([]b | ([]<>[]<>[]!b U ([]<>[]<>[]!b | ([]<>[]<>[]!b & (!a U !d)))))
-
-PATTERN:  Unknown lpar19
-LTL: []d U (X(a | b | d | !d | <>!b) & (a U []<>(b U ((b & d) | []b))))
-- []d U (X(a | b | d | !d | <>!b) & (a U []<>(b U ((b & d) | []b))))
-
-PATTERN:  Unknown lpar19
-LTL: <>((a & []d) | (!a & <>!d)) & []([]a & ((a & d) | <>[](!c | (!d & <>!c))))
-- <>((a & []d) | (!a & <>!d)) & []([]a & ((a & d) | <>[](!c | (!d & <>!c))))
-
-PATTERN:  Unknown lpar19
-LTL: <>[]<>[](a & b & []a) & (([](a | !b) & (c | [](a & d))) | (!c & <>(!a & b) & <>(!a | !d)))
-- <>[]<>[](a & b & []a) & (([](a | !b) & (c | [](a & d))) | (!c & <>(!a & b) & <>(!a | !d)))
-
-PATTERN:  Unknown lpar19
-LTL: ((X<>b U <>c) & [](Xb U c)) U (((X<>b U <>c) & [](Xb U c) & []d) | []((X<>b U <>c) & [](Xb U c)))
-- ((X<>b U <>c) & [](Xb U c)) U (((X<>b U <>c) & [](Xb U c) & []d) | []((X<>b U <>c) & [](Xb U c)))
-
-PATTERN:  Unknown lpar19
-LTL: X(<>!d & ((d & <>(b | (!c & !d) | (c & d))) | (!d & [](!b & ((c & !d) | (!c & d))))))
-- X(<>!d & ((d & <>(b | (!c & !d) | (c & d))) | (!d & [](!b & ((c & !d) | (!c & d))))))
-
-PATTERN:  Unknown lpar19
-LTL: X[]d | []<>(((<>c U <>!c) & ([]!d U !c)) | ((c U ([]c | (c & <>d))) & ([]c U ([]c | ([]c & []!c)))))
-- X[]d | []<>(((<>c U <>!c) & ([]!d U !c)) | ((c U ([]c | (c & <>d))) & ([]c U ([]c | ([]c & []!c)))))
-
-PATTERN:  Unknown lpar19
-LTL: 
-
-PATTERN:  Unknown lpar19
+PATTERN:  Unknown daniel
 LTL: 
 
 
