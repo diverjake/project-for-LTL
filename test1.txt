@@ -16,14 +16,6 @@ LTL: (a U b) -> ((c U d) | []c)
 - (a U b) -> ((c U d) | []c)
 
 PATTERN:  Unknown
-LTL: [](a -> (!b U (b U (!b & (c R !b)))))
-- [](a -> (!b U (b U (!b & (c R !b)))))
-
-PATTERN:  Unknown
-LTL: [](a -> (b R c))
-- [](a -> (b R c))
-
-PATTERN:  Unknown
 LTL: [](!a -> <>a)
 - [](!a -> <>a)
 
@@ -250,7 +242,12 @@ LTL: []!a | (!a U (a & ([]!b | (!b U ([]b | (b U ([]!b | (!b U ([]b | (b U []!b)
 []((a & <>b) -> ((!b & !c) U (b | ((!b & c) U (b | ((!b & !c) U (b | ((!b & c) U (b | (!c U b))))))))))
 
 PATTERN:  Unknown
+LTL: [](a -> (!b U (b U (!b & (c R !b)))))
+- [](a -> (!b U (b U (!b & (c R !b)))))
+
+PATTERN:  Unknown
+LTL: [](a -> (b R c))
+- [](a -> (b R c))
+
+PATTERN:  Unknown
 LTL: 
-
-
-
