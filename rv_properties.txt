@@ -802,5 +802,7 @@ PATTERN:  Unknown rabinizer3
 LTL: ((a U b) & ([]<>a | <>[]b) & ([]<>c | <>[]d)) | ((a U c) & ([]<>a | <>[]d) & (<>[]b | []<>c))
 - ((a U b) & ([]<>a | <>[]b) & ([]<>c | <>[]d)) | ((a U c) & ([]<>a | <>[]d) & (<>[]b | []<>c))
 
-
+PATTERN:  Unknown rabinizer3
+LTL: []p U q
+- []p U q
 
