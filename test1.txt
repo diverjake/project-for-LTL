@@ -1,22 +1,7 @@
 PATTERN:  Unknown lpar19
-LTL: []((c U ([]c | (c & <>d))) U (<>d | (X(!d | []!b) & ([](!b U !a) U ([](!b U !a) | ([](!b U !a) & <>!b))))))
-- []((c U ([]c | (c & <>d))) U (<>d | (X(!d | []!b) & ([](!b U !a) U ([](!b U !a) | ([](!b U !a) & <>!b))))))
+LTL: (!hbusreq0 & !hbusreq1 & !hlock0 & !hlock1 & !hready & []((!hburst0 | !hburst1) & (hlock0 -> hbusreq0) & (hlock1 -> hbusreq1) & ((!hburst0 & !hburst1 & hmastlock) -> X<>!busreq) & <>hready)) -> (decide & hgrant0 & !hgrant1 & !hmaster0 & !hmaster1 & !hmastlock & start & [](((!hmaster0 & !hmaster1) -> (busreq <-> hbusreq0)) & ((hmaster0 & !hmaster1) -> (busreq <-> hbusreq1)) & (!hready -> X!start) & ((!hburst0 & !hburst1 & hmastlock & start) -> X((!start U (!busreq & !start)) | []!start)) & ((hburst0 & !hburst1 & hmastlock & hready & start) -> X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start)))))))))) & ((hburst0 & !hburst1 & hmastlock & !hready & start) -> X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start))))))))))))) & (hready -> (hgrant0 <-> X(!hmaster0 & !hmaster1))) & (hready -> (hgrant1 <-> X(hmaster0 & !hmaster1))) & (hready -> (locked <-> Xhmastlock)) & (X!start -> (((!hmaster0 & !hmaster1) <-> X(!hmaster0 & !hmaster1)) & (hmastlock <-> Xhmastlock))) & (X!start -> ((hmastlock <-> Xhmastlock) & ((hmaster0 & !hmaster1) <-> X(hmaster0 & !hmaster1)))) & ((decide & Xhgrant0) -> (hlock0 <-> Xlocked)) & ((decide & Xhgrant1) -> (hlock1 <-> Xlocked)) & (!decide -> ((hgrant0 <-> Xhgrant0) & (hgrant1 <-> Xhgrant1))) & (!decide -> (locked <-> Xlocked)) & (hbusreq0 -> <>(!hbusreq0 | (!hmaster0 & !hmaster1))) & (hbusreq1 -> <>(!hbusreq1 | (hmaster0 & !hmaster1))) & (!hgrant1 -> ((!hgrant1 U hbusreq1) | []!hgrant1)) & ((decide & !hbusreq0 & !hbusreq1) -> Xhgrant0)))
+- (!hbusreq0 & !hbusreq1 & !hlock0 & !hlock1 & !hready & []((!hburst0 | !hburst1) & (hlock0 -> hbusreq0) & (hlock1 -> hbusreq1) & ((!hburst0 & !hburst1 & hmastlock) -> X<>!busreq) & <>hready)) -> (decide & hgrant0 & !hgrant1 & !hmaster0 & !hmaster1 & !hmastlock & start & [](((!hmaster0 & !hmaster1) -> (busreq <-> hbusreq0)) & ((hmaster0 & !hmaster1) -> (busreq <-> hbusreq1)) & (!hready -> X!start) & ((!hburst0 & !hburst1 & hmastlock & start) -> X((!start U (!busreq & !start)) | []!start)) & ((hburst0 & !hburst1 & hmastlock & hready & start) -> X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start)))))))))) & ((hburst0 & !hburst1 & hmastlock & !hready & start) -> X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start & X([]!start | (!start U (hready & !start))))))))))))) & (hready -> (hgrant0 <-> X(!hmaster0 & !hmaster1))) & (hready -> (hgrant1 <-> X(hmaster0 & !hmaster1))) & (hready -> (locked <-> Xhmastlock)) & (X!start -> (((!hmaster0 & !hmaster1) <-> X(!hmaster0 & !hmaster1)) & (hmastlock <-> Xhmastlock))) & (X!start -> ((hmastlock <-> Xhmastlock) & ((hmaster0 & !hmaster1) <-> X(hmaster0 & !hmaster1)))) & ((decide & Xhgrant0) -> (hlock0 <-> Xlocked)) & ((decide & Xhgrant1) -> (hlock1 <-> Xlocked)) & (!decide -> ((hgrant0 <-> Xhgrant0) & (hgrant1 <-> Xhgrant1))) & (!decide -> (locked <-> Xlocked)) & (hbusreq0 -> <>(!hbusreq0 | (!hmaster0 & !hmaster1))) & (hbusreq1 -> <>(!hbusreq1 | (hmaster0 & !hmaster1))) & (!hgrant1 -> ((!hgrant1 U hbusreq1) | []!hgrant1)) & ((decide & !hbusreq0 & !hbusreq1) -> Xhgrant0)))
 
-PATTERN:  Unknown lpar19
-LTL: []!a | ((!a & !b) U (a | ((!a & b) U (a | ((!a & !b) U (a | ((!a & b) U (a | (!b U a)))))))))
-- []!a | ((!a & !b) U (a | ((!a & b) U (a | ((!a & !b) U (a | ((!a & b) U (a | (!b U a)))))))))
-
-PATTERN:  Unknown lpar19
-LTL: []!a | (!a U (a & ([]!b | (!b U ([]b | (b U ([]!b | (!b U ([]b | (b U []!b))))))))))
-- []!a | (!a U (a & ([]!b | (!b U ([]b | (b U ([]!b | (!b U ([]b | (b U []!b))))))))))
-
-PATTERN:  Unknown lpar19
-LTL: [](!a | []!b | ((!b & !c) U (b | ((!b & c) U (b | ((!b & !c) U (b | ((!b & c) U (b | (!c U b))))))))))
-- [](!a | []!b | ((!b & !c) U (b | ((!b & c) U (b | ((!b & !c) U (b | ((!b & c) U (b | (!c U b))))))))))
-
-PATTERN:  Unknown lpar19
-LTL: [](a | ((!b & !c) U (c | ((b & !c) U (c | ((!b & !c) U (c | ((b & !c) U (c | []b | []!b | (!b U c))))))))))
-- [](a | ((!b & !c) U (c | ((b & !c) U (c | ((!b & !c) U (c | ((b & !c) U (c | []b | []!b | (!b U c))))))))))
 
 PATTERN:  Unknown lpar19
 LTL: 
@@ -25,7 +10,73 @@ PATTERN:  Unknown lpar19
 LTL: 
 
 PATTERN:  Unknown lpar19
-LTL: 
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
+
+PATTERN:  Unknown lpar19
+LTL:
 
 
 
