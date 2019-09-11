@@ -570,10 +570,6 @@ LTL: a & ([]<>a | <>[]b) & ([]<>c | <>[]d)
 - a & ([]<>a | <>[]b) & ([]<>c | <>[]d)
 
 PATTERN:  Unknown
-LTL: ([]<>(a & Xb) | <>[](b | X!a)) & ([]<>(b & Xc) | <>[](!c | Xa)) & ([]<>(b & XXa) | <>[](!c | X!b))
-- ([]<>(a & Xb) | <>[](b | X!a)) & ([]<>(b & Xc) | <>[](!c | Xa)) & ([]<>(b & XXa) | <>[](!c | X!b))
-
-PATTERN:  Unknown
 LTL: <>(q & X(p U r)) -> []<>acc
 - <>(q & X(p U r)) -> []<>acc
 
@@ -1145,4 +1141,6 @@ PATTERN:  Unknown lpar19
 LTL: X(<>!d & ((d & <>(b | (!c & !d) | (c & d))) | (!d & [](!b & ((c & !d) | (!c & d))))))
 - X(<>!d & ((d & <>(b | (!c & !d) | (c & d))) | (!d & [](!b & ((c & !d) | (!c & d))))))
 
-
+PATTERN:  Unknown
+LTL: ([]<>(a & Xb) | <>[](b | X!a)) & ([]<>(b & Xc) | <>[](!c | Xa)) & ([]<>(b & XXa) | <>[](!c | X!b))
+- ([]<>(a & Xb) | <>[](b | X!a)) & ([]<>(b & Xc) | <>[](!c | Xa)) & ([]<>(b & XXa) | <>[](!c | X!b))
