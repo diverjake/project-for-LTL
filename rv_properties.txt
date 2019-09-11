@@ -754,4 +754,16 @@ PATTERN:  Unknown
 LTL: []((a & <>b) -> ((c -> (!b U (!b & d & e & X((!b & e) U f)))) U b))
 - []((a & <>b) -> ((c -> (!b U (!b & d & e & X((!b & e) U f)))) U b))
 
+PATTERN:  Unknown router
+LTL: [](!p1 & (p2 U (!p2 U (!p3 | p4))))
+- [](!p1 & (p2 U (!p2 U (!p3 | p4))))
+
+PATTERN:  Unknown router
+LTL: [](!q | []p | (!p U (r | (!p & s & X(!p U t)))))
+- [](!q | []p | (!p U (r | (!p & s & X(!p U t)))))
+
+PATTERN:  Unknown router
+LTL: []((p1 & X!p1) | X(p1 U (p1 & !p2 & X(p1 & p2 & (p1 U (p1 & !p2 & X(p1 & p2)))))))
+- []((p1 & X!p1) | X(p1 U (p1 & !p2 & X(p1 & p2 & (p1 U (p1 & !p2 & X(p1 & p2)))))))
+
 
