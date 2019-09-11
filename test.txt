@@ -1,69 +1,22 @@
 PATTERN:  Unknown
-LTL: []!grant | [](req -> <>ack) | [](go -> <>grant)
-- []!g | [](r -> <>a) | [](go -> <>g)
+LTL: []<>!rm -> []((!g0 | !gm) & (r0 -> <>g0) & (rm -> X(!g0 U gm)))
+- []<>!rm -> []((!g0 | !gm) & (r0 -> <>g0) & (rm -> X(!g0 U gm)))
 
 PATTERN:  Unknown
-LTL: <>((req & []!ack) | (go & []!grant))
-- <>((r & []!a) | (go & []!g))
+LTL: []<>!rm -> []((!g0 | !g1) & (!g0 | !gm) & (!g1 | !gm) & (r0 -> <>g0) & (r1 -> <>g1) & (rm -> X((!g0 & !g1) U gm)))
+- []<>!rm -> []((!g0 | !g1) & (!g0 | !gm) & (!g1 | !gm) & (r0 -> <>g0) & (r1 -> <>g1) & (rm -> X((!g0 & !g1) U gm)))
 
 PATTERN:  Unknown
-LTL: ([]<>req | <>cancel) -> ([]<>grant | []ack)
-- ([]<>r | <>c) -> ([]<>g | []a)
+LTL: []<>!rm -> [](((!g0 & !g1) | (!g2 & (!g0 | !g1))) & (!g0 | !gm) & (!g1 | !gm) & (!g2 | !gm) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (rm -> X((!g0 & !g1 & !g2) U gm)))
+- []<>!rm -> [](((!g0 & !g1) | (!g2 & (!g0 | !g1))) & (!g0 | !gm) & (!g1 | !gm) & (!g2 | !gm) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (rm -> X((!g0 & !g1 & !g2) U gm)))
 
 PATTERN:  Unknown
-LTL: []<>req -> (!grant & []((!grant -> (!grant U req)) & <>grant & (req -> <>grant)))
-- []<>r -> (!g & []((!g -> (!g U r)) & <>g & (r -> <>g)))
+LTL: []<>!rm -> [](((!g0 & !g1 & (!g2 | !g3)) | (!g2 & !g3 & (!g0 | !g1))) & (!g0 | !gm) & (!g1 | !gm) & (!g2 | !gm) & (!g3 | !gm) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (r3 -> <>g3) & (rm -> X((!g0 & !g1 & !g2 & !g3) U gm)))
+- []<>!rm -> [](((!g0 & !g1 & (!g2 | !g3)) | (!g2 & !g3 & (!g0 | !g1))) & (!g0 | !gm) & (!g1 | !gm) & (!g2 | !gm) & (!g3 | !gm) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (r3 -> <>g3) & (rm -> X((!g0 & !g1 & !g2 & !g3) U gm)))
 
 PATTERN:  Unknown
-LTL: []<>req -> []<>grant
-- []<>r -> []<>g
-
-PATTERN:  Unknown
-LTL: [](cancel -> X(go | Xgo)) -> []((cancel -> X(!grant U go)) & (grant -> X!grant) & (req -> (cancel | grant | X(cancel | grant | X(cancel | grant | X(cancel | grant))))))
-- [](c -> X(go | Xgo)) -> []((c -> X(!g U go)) & (g -> X!g) & (r -> (c | g | X(c | g | X(c | g | X(c | g))))))
-
-PATTERN:  Unknown
-LTL: (p U (q & X(r & <>(s & X<>(u & X<>(v & X<>w)))))) -> []<>acc
-- (p U (q & X(r & <>(s & X<>(u & X<>(v & X<>w)))))) -> []<>acc
-
-PATTERN:  Unknown
-LTL: <>(p & X<>(q & X<>(r & X<>s))) -> []<>acc
-- <>(p & X<>(q & X<>(r & X<>s))) -> []<>acc
-
-PATTERN:  Unknown
-LTL: (p U (q & X(r U s))) -> []<>acc
-- (p U (q & X(r U s))) -> []<>acc
-
-PATTERN:  Unknown
-LTL: [](p -> (q U r)) -> []<>acc
-- [](p -> (q U r)) -> []<>acc
-
-PATTERN:  Unknown
-LTL: <>(p & X(q & X<>r)) -> []<>acc
-- <>(p & X(q & X<>r)) -> []<>acc
-
-PATTERN:  Unknown
-LTL: ((p U (q U r)) & (q U (r U p)) & (r U (p U q))) -> []<>acc
-- ((p U (q U r)) & (q U (r U p)) & (r U (p U q))) -> []<>acc
-
-PATTERN:  Unknown
-LTL: <>(q & X(p U r)) -> []<>acc
-- <>(q & X(p U r)) -> []<>acc
-
-PATTERN:  Unknown
-LTL: 
-
-PATTERN:  Unknown
-LTL: 
-
-PATTERN:  Unknown
-LTL: 
-
-PATTERN:  Unknown
-LTL: 
-
-PATTERN:  Unknown
-LTL: 
+LTL: []<>!rm -> [](((!g0 & !g1 & !g2 & (!g3 | !g4)) | (!g3 & !g4 & ((!g0 & !g1) | (!g2 & (!g0 | !g1))))) & (!g0 | !gm) & (!g1 | !gm) & (!g2 | !gm) & (!g3 | !gm) & (!g4 | !gm) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (r3 -> <>g3) & (r4 -> <>g4) & (rm -> X((!g0 & !g1 & !g2 & !g3 & !g4) U gm)))
+- []<>!rm -> [](((!g0 & !g1 & !g2 & (!g3 | !g4)) | (!g3 & !g4 & ((!g0 & !g1) | (!g2 & (!g0 | !g1))))) & (!g0 | !gm) & (!g1 | !gm) & (!g2 | !gm) & (!g3 | !gm) & (!g4 | !gm) & (r0 -> <>g0) & (r1 -> <>g1) & (r2 -> <>g2) & (r3 -> <>g3) & (r4 -> <>g4) & (rm -> X((!g0 & !g1 & !g2 & !g3 & !g4) U gm)))
 
 PATTERN:  Unknown
 LTL: 
