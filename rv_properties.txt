@@ -1,9 +1,9 @@
 # ##########################################################################
 # The specifications are taken from
 #
-# http://patterns.projects.cis.ksu.edu/documentation/specifications/ALL.raw.
-#
-# Typed in in their present form by Andreas Bauer (2009-04-30)
+# https://gitlab.lrz.de/i7/ltlstore 
+#           and 
+#        buchistore
 #
 # Lines starting with '-' are those that can be parsed by ltl3tools.
 # Lines starting with '@' are not processed, as they take about 20 min
@@ -1136,3 +1136,39 @@ LTL: <>[]<>[](a & b & []a) & (([](a | !b) & (c | [](a & d))) | (!c & <>(!a & b) 
 PATTERN:  Unknown lpar19
 LTL: X(<>!d & ((d & <>(b | (!c & !d) | (c & d))) | (!d & [](!b & ((c & !d) | (!c & d))))))
 - X(<>!d & ((d & <>(b | (!c & !d) | (c & d))) | (!d & [](!b & ((c & !d) | (!c & d))))))
+
+PATTERN:  Unknown daniel
+LTL: a && !a
+- a && !a
+
+PATTERN:  Unknown daniel
+LTL: <> [] a && <>!<>a
+- <> [] a && <>!<>a
+
+PATTERN:  Unknown daniel
+LTL: [] a && [] !a
+- [] a && [] !a
+
+PATTERN:  Unknown daniel
+LTL: [] a ||[] !a
+- [] a ||[] !a
+
+PATTERN:  Unknown daniel
+LTL: [] a || <> ! <> a
+- [] a || <> ! <> a
+
+PATTERN:  Unknown daniel
+LTL: [] a || ! <> ! <> a 
+- [] a || ! <> ! <> a 
+
+PATTERN:  Unknown daniel
+LTL: a||!a 
+- a||!a 
+
+PATTERN:  Unknown daniel
+LTL: ([]s && []!s)->(<>[]s && <> !<>s)
+- ([]s && []!s)->(<>[]s && <> !<>s)
+
+PATTERN:  Unknown daniel
+LTL: a R a
+- a R a
