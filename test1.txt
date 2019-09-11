@@ -1,49 +1,87 @@
-PATTERN:  Unknown rabinizer3
-LTL: []p U q
-- []p U q
+PATTERN:  Unknown lpar19
+LTL: []d & ((a & b & ((a & b) | (!a & !b))) | (((b & d) | (!b & !d)) & <>c))
+- []d & ((a & b & ((a & b) | (!a & !b))) | (((b & d) | (!b & !d)) & <>c))
 
-PATTERN:  Unknown mutual
-LTL: []<>(p1=10) & []<>(p2=10) & []<>(p3=10)
-- []<>(p1=10) & []<>(p2=10) & []<>(p3=10)
+PATTERN:  Unknown lpar19
+LTL: (<>[]!a & (!a | d | []c)) | ([]<>a & ([]<>a | (a & !d & <>!c)))
+- (<>[]!a & (!a | d | []c)) | ([]<>a & ([]<>a | (a & !d & <>!c)))
 
-PATTERN:  Unknown mutual
+PATTERN:  Unknown lpar19
+LTL: (!a & <>a)))) & <>(b | !d)))
+- (!a & <>a)))) & <>(b | !d)))
+
+PATTERN:  Unknown lpar19
+LTL: <>(<>a & (d | <>c)) | <>((!d & (!b | []b)) | (b & d & <>!b))
+- <>(<>a & (d | <>c)) | <>((!d & (!b | []b)) | (b & d & <>!b))
+
+PATTERN:  Unknown lpar19
+LTL: (!b & c) | <>!b | []<>[]((!d & <>(!c | !d)) | (d & [](c & d)))
+- (!b & c) | <>!b | []<>[]((!d & <>(!c | !d)) | (d & [](c & d)))
+
+PATTERN:  Unknown lpar19
+LTL: (!d & ((a & b) | (!a & !c) | (a & c)) & []((a & c & (!c | <>c)) | (!c & (!a | (c & []!c))))) | (d & (((!a | !b) & ((!a & c) | (a & !c))) | <>((c & (!a | (c & []!c))) | (a & !c & (!c | <>c)))))
+- (!d & ((a & b) | (!a & !c) | (a & c)) & []((a & c & (!c | <>c)) | (!c & (!a | (c & []!c))))) | (d & (((!a | !b) & ((!a & c) | (a & !c))) | <>((c & (!a | (c & []!c))) | (a & !c & (!c | <>c)))))
+
+PATTERN:  Unknown lpar19
+LTL: <>(((<>d & ([](d | <>b) | (<>b & <>(a | !b)))) | ([]!d & ([](!a & b) | []!b) & <>(!d & []!b))) & (c | []!d))
+- <>(((<>d & ([](d | <>b) | (<>b & <>(a | !b)))) | ([]!d & ([](!a & b) | []!b) & <>(!d & []!b))) & (c | []!d))
+
+PATTERN:  Unknown lpar19
+LTL: (((a & d) | (!a & !d)) & [](!b | (!a & d))) | (((!a & d) | (a & !d)) & <>(b & (a | !d))) | (a & []b)
+- (((a & d) | (!a & !d)) & [](!b | (!a & d))) | (((!a & d) | (a & !d)) & <>(b & (a | !d))) | (a & []b)
+
+PATTERN:  Unknown lpar19
+LTL: []((!a | (a & b) | (!a & !b)) & ((d & <>c & <>!d) | ([]!c & (!d | []d))))
+- []((!a | (a & b) | (!a & !b)) & ((d & <>c & <>!d) | ([]!c & (!d | []d))))
+
+PATTERN:  Unknown lpar19
+LTL: !d | ([]c & <>[]b & <>((!b & !c) | (b & c))) | ([]<>!b & (<>!c | []((!b & c) | (b & !c))))
+- !d | ([]c & <>[]b & <>((!b & !c) | (b & c))) | ([]<>!b & (<>!c | []((!b & c) | (b & !c))))
+
+PATTERN:  Unknown lpar19
+LTL: !a | b | c | (a & c & d) | (!a & (!c | !d)) | <>[]c | [](d & !d)
+- !a | b | c | (a & c & d) | (!a & (!c | !d)) | <>[]c | [](d & !d)
+
+PATTERN:  Unknown lpar19
+LTL: [](a & []((a & d) | (!a & !d))) | (c & []!d & []a)
+- [](a & []((a & d) | (!a & !d))) | (c & []!d & []a)
+
+PATTERN:  Unknown lpar19
+LTL: []<>((!a | c | !d) & (b | []c))
+- []<>((!a | c | !d) & (b | []c))
+
+PATTERN:  Unknown lpar19
+LTL: []<>!b & <>[](b & !d & []d)
+- []<>!b & <>[](b & !d & []d)
+
+PATTERN:  Unknown lpar19
+LTL: []((!c | d | (!b & c)) & []a)
+- []((!c | d | (!b & c)) & []a)
+
+PATTERN:  Unknown lpar19
+LTL: <>[]<>((b & []<>d & ((!b & c) | <>b)) | (<>[]!d & (!b | ((b | !c) & []!b))))
+- <>[]<>((b & []<>d & ((!b & c) | <>b)) | (<>[]!d & (!b | ((b | !c) & []!b))))
+
+PATTERN:  Unknown lpar19
+LTL: []c | [](!b & d) | (b & (!b | []<>!b))
+- []c | [](!b & d) | (b & (!b | []<>!b))
+
+PATTERN:  Unknown lpar19
+LTL: c | <>(!b & (b | !b) & [](c & !d))
+- c | <>(!b & (b | !b) & [](c & !d))
+
+PATTERN:  Unknown lpar19
+LTL: <>([]d & []b & <>(!a & <>a & ([]b | <>d) & [](!a & !c)))
+- <>([]d & []b & <>(!a & <>a & ([]b | <>d) & [](!a & !c)))
+
+PATTERN:  Unknown lpar19
+LTL: ((<>!a & (b | !c | [](c | d))) | (!b & c & <>(!c & !d) & []a)) & (((d | !d) & (<>!c | <>d)) | (d & !d & []c & []!d))
+- ((<>!a & (b | !c | [](c | d))) | (!b & c & <>(!c & !d) & []a)) & (((d | !d) & (<>!c | <>d)) | (d & !d & []c & []!d))
+
+PATTERN:  Unknown lpar19
+LTL: (<>c & []!b & (<>[]<>!a | <>(!b | d | []!c))) | ([]<>[]a & [](b & !d & <>c) & ([]!c | <>b))
+- (<>c & []!b & (<>[]<>!a | <>(!b | d | []!c))) | ([]<>[]a & [](b & !d & <>c) & ([]!c | <>b))
+
+PATTERN:  Unknown lpar19
 LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-PATTERN:  Unknown mutual
-LTL: 
-
-
 
