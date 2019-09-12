@@ -1172,3 +1172,16 @@ LTL: ([]s && []!s)->(<>[]s && <> !<>s)
 PATTERN:  Unknown daniel
 LTL: a R a
 - a R a
+
+PATTERN:  Unknown 800 second
+LTL: [](<>p & <>q & <>r & <>s & <>u) -> []<>acc
+- [](<>p & <>q & <>r & <>s & <>u) -> []<>acc 
+
+PATTERN:  Unknown 4000 second
+LTL: ![] (s => (q & X (! t U r) => X (! t U (r & <> p))) U (t | [] (q & X (! t U r) => X (! t U (r & <> p)))))
+- ![] (s => (q & X (! t U r) => X (! t U (r & <> p))) U (t | [] (q & X (! t U r) => X (! t U (r & <> p)))))
+
+PATTERN:  Unknown 
+LTL: ![] <> s
+- ![] <> s
+
