@@ -28,7 +28,7 @@ LTL: ((<>(p0 & <>p1) & <>(q0 & <>q1)) -> []<>acc) && ([]<>acc -> (<>(p0 & <>p1) 
 
 
 PATTERN:  Unknown LtlNfBa
-LTL: 
+LTL: [] <> ((a R b) | (b R a))
 
 PATTERN:  Unknown LtlNfBa
 LTL: 
