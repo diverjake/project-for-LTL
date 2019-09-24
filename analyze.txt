@@ -5,13 +5,6 @@
 #           and 
 #        buchistore
 #
-# Lines starting with '-' are those that can be parsed by ltl3tools.
-# Lines starting with '@' are not processed, as they take about 20 min
-# to process on my dual core machine. 
-#
-# Formulas marked as ??? are not processed at all due to other problems, not
-# specified above.
-#
 # ##########################################################################
 
 PATTERN: Global
